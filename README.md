@@ -36,7 +36,7 @@ C) Student's Role
 
 D) Parent's Role
 
-1- View their children's course schedule.
-2- View the teachers who are supervising their children.
-3- View school notes.
-4- View childrens' absences.
+1- View their children's course schedule.<br />
+2- View the teachers who are supervising their children.<br />
+3- View school notes.<br />
+4- View childrens' absences.<br />
