@@ -1,0 +1,728 @@
+a{
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    background: #e5e7eb;
+    position: relative;
+    display: flex;
+}
+
+#menu{
+    background: #141E30;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#menu .logo a{
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #428bca;
+}
+
+#menu .logo svg{
+    font-size: 40px;
+    margin-right: 15px;
+    color: #5c8af0;
+}
+
+#menu .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0 30px;
+}
+
+#menu .items{
+    margin-top: 40px;
+}
+
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+#menu .items li svg{
+    color: rgb(134, 141, 151);
+    width: 20px;
+    height: 20px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items li a{
+    text-decoration: none;
+    color: rgb(134, 141, 151); 
+    transition: 0.3s ease; 
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    initial-letter: 2;
+}
+
+#menu .items li:hover{
+    background: #253047;
+    cursor: pointer;
+}
+
+#menu .items li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+
+#menu .items li:hover svg,
+#menu .items li:hover a{
+    color: #f3f4f6;
+}
+
+#interface{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+
+}
+
+#interface .navigation{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+
+#interface .navigation .search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+}
+
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+#interface .navigation .search svg{
+    margin-right: 14px;
+}
+
+#interface .navigation .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navigation .profile svg{
+    margin-right: 20px;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+#interface .navigation .profile img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.n1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-btn{
+    display: none;
+    color: #2b2b2b;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.i-name{
+    color: #444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 70px;
+    line-height: 1;
+}
+
+.values{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.values .val-box{
+    background: #fff;
+    width: 235px;
+    padding: 40px 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.values .val-box svg{
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.values .val-box:nth-child(1) svg{
+    background-color: #7b74ec;
+}
+.values .val-box:nth-child(2) svg{
+    background-color: #5c8af0;
+}
+.values .val-box:nth-child(3) svg{
+    background-color: #e45d99;
+}
+.values .val-box:nth-child(4) svg{
+    background-color: #74DAEC;
+}
+.values .val-box:nth-child(5) svg{
+    background-color: #74ec82;
+}
+.values .val-box:nth-child(6) svg{
+    background-color: #dcec74;
+}
+.values .val-box h3{
+    font-size: 18px;
+    font-weight: 600px;
+}
+
+.values .val-box span{
+    font-size: 18px;
+    color: #828997;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.board{
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background: #FFF;
+    border-radius: 8px;
+}
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787D8d;
+}
+.board .students{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+table{
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 1px solid #eef0f3;
+}
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding: 15px;
+}
+tbody tr td{
+    padding: 10px 15px;
+}
+.active p{
+    background-color: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+.edit a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #554cd1;
+    font-weight: 600;
+}
+form .btn{
+ margin-bottom: 10px;
+ padding-left:10px;
+ padding-right: 10px;
+ font-size: 18px;
+ font-weight: bold;
+ box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+ letter-spacing: 0.5px;
+}
+
+@media (max-width:769px) {
+    #menu{
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+    #menu.active{
+        left: 0;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    #interface{
+        width: 100%;
+        margin-left: 0;
+        display: inline-block;
+        transition: 00.3s ease;
+    }
+    #interface .navigation{
+        width: 100%;
+    }
+    /* .values{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start; 
+
+    } */
+    .values{
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;
+    }
+    .values .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+    .board{
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #menu.active~#interface{
+        width: calc(100% - 270px);
+        margin-left: 270px;
+    }
+}
+
+@media (max-width:477px) {
+    #interface .navigation{
+        padding: 15px;
+    }
+    #interface .navigation .search input{
+        width: 150px;
+    };
+    .i-name{
+        padding: 30px 15px 0 15px;
+    }
+    .values{
+        padding: 15px 15px 0 15px ;
+    }
+    .values .val-box{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .board{
+        margin: 30px 15px 30px 15px;  
+    }
+}
+.editt{
+    background-color: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+/**********************************ALL CLASSES AND COURSES******************************************/
+.box{
+    margin: 0px !important;
+    padding: 0px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.boxx{
+    background: #fff;
+    width: 235px;
+    padding: 16px 0px;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 2px solid #ccc;
+    padding-top: 10px;
+}
+
+.values .val-box svg{
+    width: 20px !important;
+    height: 20px !important;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+    padding: 10px;
+}
+@media (max-width:769px) {
+    .values{
+        display: flex ;
+        justify-content: center ;
+        align-items: center ;
+    }
+}
+@media (max-width:477px) {
+    .value-box{
+       width: 80%;
+    }
+}
+
+/**************************************************ADD AND  UPDATE PAGES************************************/
+.form-add{
+    width:calc(100% - 200px);
+    margin-left: 120px;
+    margin-top: 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.label-add{
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+#interface .navigation{
+    border-bottom: none;
+}
+
+
+/****************************************HOMEWORK AND EXAM QUESTION*********************************/
+.form-question{
+    width:calc(100% - 200px);
+    margin-left: 120px;
+    margin-top: 100px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.label-question{
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+@media (max-width: 450px) {
+.form-question{
+    width: 100%;
+    margin-left: 0;
+}
+}
+/******************************************PROFILE STUDENT AND TEACHER********************************/
+.info{
+    margin-top: 100px;
+}
+.info .photo{
+    width: 270px;
+    height: 100%;
+    margin-left: 15px;
+    
+}
+.info .photo img{
+    width: 100%;
+}
+.info th{
+    width: 30% !important;
+}
+.info th ,.info td{
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+@media (max-width:769px) {
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info .photo{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:477px) {
+    .info .ss{
+        margin:0 10px 10px 10px ;
+    }
+}
+
+/**Custom Code 27-6-2022*/
+.info .ss{
+    height: 544px;
+    /* overflow-y: scroll; */
+}
+#interface .navigation{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    position: fixed;
+    width: calc(100% - 300px);
+    z-index: 300;
+}
+/*************************************select multi*********************************************/
+.input-multi{
+    outline: none;
+    border: none;
+}
+.multi-selector{
+    width: max-content;
+}
+.select-field{
+    border: 1px solid rgb(187, 187, 187);
+}
+.select-field,.task,.list{
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem;
+}
+.list{
+    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
+    display: none;
+}
+.down-arrow{
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.task{
+    display: block;
+    padding-left: 0;
+}
+.task:hover{
+    background-color: aliceblue;
+}
+.show{
+    display: block;
+}
+.rotate180{
+    transform: rotate(-60deg);
+}
+
+/**Custom Code 28-6-2022**/
+#multi_option{
+	max-width: 100%;
+	width: 350px;
+}
+label{
+	display:block;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.vscomp-toggle-button{
+	padding: 10px 30px 10px 10px;
+	border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:769px) {
+    textarea{
+        width:525px;
+    }
+}
+@media (max-width:477px) {
+    textarea{
+        width:370px;
+    }
+}
+
+/************************************* Add Weekly Schedule *********************************************/
+@media (max-width: 769px) {
+    .btn-remove{
+        margin-left: -1px;
+    }
+}
+@media (max-width: 450px) {
+    .pagin ul{
+        display: flex !important;
+        justify-content: start !important;
+    }
+}
+
+/**Custom Code By George**/
+.std-button {
+    background-color: cadetblue;
+    border: none;
+    
+}
+.std-button a {
+    color:white !important;
+}
+.std-button:active,.std-button:focus {
+    background-color:cadetblue !important;
+}
+.std-button:hover {
+    background-color: var(--bs-body-color);
+    border: none;
+}
+.std-list:hover {
+    background-color:aliceblue;
+}
+.std-calendar {
+    background-color: white;
+}
+.std-calendar .fc-body .fc-bg td:hover {
+    background-color: antiquewhite;
+}
+#classroom {
+    width:50%;
+    margin-top:100px;
+}
+.student-navbar {
+    margin-bottom: 20px;
+
+}
+.student-navbar button {
+    color:var(--bs-body-color);
+}
+.student-navbar button:hover {
+    color:var(--bs-body-color);
+}
+.nav-tabs {
+    border-bottom: 1px solid lightgrey;
+}
+.btn-noti span{
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 20px;
+    height: 14px;
+    border-radius: 10px;
+    min-width: 15px;
+    background: lightblue;
+    color: #fff;
+    line-height: 14px;
+    padding: 0px 2px;
+    font-size: 11px;
+    white-space: nowrap;
+    -webkit-transform-origin: -10% center;
+    -ms-transform-origin: -10% center;
+    transform-origin: -10% center;
+    font-family: tahoma;
+    box-shadow: 0 0 0 1px #3d793f;
+    text-align: center;
+    right: 64px;
+}
+
+.navigation .profile a {
+    color:black;
+}
+.ml-35 {
+    margin-left:35px !important;
+}
+.pl-30 {
+    padding-left:30px !important;
+}
+.form-button {
+    color: cadetblue;
+    border-color: white;
+    padding: 3px;
+}
+ .teacher-profile-photo{
+    height: 110% !important;
+} 
+.add-course-select {
+  width:100% !important;
+}
+.pagin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.page-link{
+    color: cadetblue;
+}
+.searchResult ul a{
+    color: rgb(134, 141, 151);
+}
+.searchResult ul a:hover{
+    color: black;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.error {
+    color:red !important;
+  }
+
+.d-none{
+    display:none;
+}
+
+.text-black{
+    color:black !important;
+  }
+
+  .text-black:hover{
+    color:cadetblue !important;
+  }
